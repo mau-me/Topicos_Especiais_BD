@@ -1,0 +1,22 @@
+1. O sistema deve controlar a inscricao dos inscritos atravez de um formulario WEB
+2. O sistema deve gerar um n�mero de inscricao unico para cada participante do envento
+3. O sistema deve gerar um cracha para o usuario 
+4. O sistema deve gerar um certificado para o usuario
+5. Somente inscritos como participantes podem enviar artigos
+6. Uma pessoa so pode se inscrever uma vez
+7. Um autor pode enviar varios artigos
+8. Um artigo pode ter varios autores
+9. Os artigos devem ser enviados atravez de um formulerio Web
+10. O sistema deve analisar os dados no envio dos artigos. Se os dados estiverem corretos o sistema confirma a inscricao e gerar um numero unico de submissao de artigos, se estiverem errados o sistema recusa o envio
+11. Um participante pode ser revisor, se ao se cadastrar, marcar essa opcao na ficha de inscricao
+12. Os artigos sao julgados pelos revisores
+13. Ao encerrar o prazo o sistema deve enviar os artigos para revisao. Cada artigo deve ser enviado por e-mail para 5 revisores aleatoriamente
+14. Cada revisor tem 5 dias para enviar uma avaliacao dos artigos atravez de um formulario web
+15. Cada revisor deve receber no maximo 10 artigos
+16. Quando o revisor revisar um artigo, o sistema deve enviar o comentario do revisor para os autores do artigo
+17. O sistema deve guardar a nota que o revisor der ao artigo para a avaliacao final
+18. Os artigos que nao forem revisados dentro do prazo devem ser reenviados a outros revisores, ate completar as 5 revisoes ou ate o encerramento do prazo(deadline)
+19. Ao fim do prazo, o sistema deve gerar uma lista com todos os artigos em ordem decrescente das medias obtidas na avaliacao, ate o 20 artigo
+20. Devem ser excluidos todos os artigos com menos de 3 revisoes 
+21. A lista de com artigos aprovados deve ser enviada a todos os participantes por e-mail 
+22. O autor nao pode revisar o proprio artigo.
