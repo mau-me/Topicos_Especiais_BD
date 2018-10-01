@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Login Congresso</title>
+	<title>Criar Conta</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -37,9 +37,36 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
 				<form class="login100-form validate-form" action="principal.html" method="POST">
 					<span class="login100-form-title p-b-33">
-						Login
+						Criar Conta
 					</span>
 
+					
+					<div class="wrap-input100 validate-input" data-validate = "Insira seu nome">
+						<input class="input100" type="text" name="nome" placeholder="Nome">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input" data-validate = "Insira seu endereço">
+						<input class="input100" type="text" name="endereço" placeholder="Endereço">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Insira seu telefone">
+						<input class="input100" type="tel" name="telefone" placeholder="Telefone/Celular">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+					
+					<div class="wrap-input100 validate-input" data-validate = "Insira um Local de Trabalho">
+						<input class="input100" type="text" name="local_emprego" placeholder="Local de Emprego">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+					
 					<div class="wrap-input100 validate-input" data-validate = "Insira um email válido!">
 						<input class="input100" type="email" name="email" placeholder="Email">
 						<span class="focus-input100-1"></span>
@@ -54,13 +81,13 @@
 
 					<div class="container-login100-form-btn m-t-20">
 						<button class="login100-form-btn" type="submit">
-							Entrar
+							Criar
 						</button>
 					</div>
 
 					<div class="text-center p-t-45 p-b-4">
 						<span class="txt1">
-							Esqueceu a senha?
+							Possue Conta, mas esqueceu a senha? 
 						</span>
 
 						<a href="recuperar_senha.php" class="txt2 hov1">
@@ -70,11 +97,11 @@
 
 					<div class="text-center">
 						<span class="txt1">
-							Não possue conta?
+							Possuo conta e lembrou a senha?
 						</span>
 
-						<a href="criar_conta.php" class="txt2 hov1">
-							Criar uma
+						<a href="index.php" class="txt2 hov1">
+							Retornar
 						</a>
 					</div>
 				</form>

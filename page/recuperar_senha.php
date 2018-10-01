@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Login Congresso</title>
+	<title>Recuperar Senha</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -37,40 +37,34 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
 				<form class="login100-form validate-form" action="principal.html" method="POST">
 					<span class="login100-form-title p-b-33">
-						Login
+						Recuperar Senha
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Insira um email válido!">
-						<input class="input100" type="email" name="email" placeholder="Email">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-
-					<div class="wrap-input100 rs1 validate-input" data-validate="Senha é Obrigatória!">
-						<input class="input100" type="password" name="pass" placeholder="Senha">
+						<input class="input100" type="email" name="email" placeholder="Digite o e-mail cadastrado">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 
 					<div class="container-login100-form-btn m-t-20">
 						<button class="login100-form-btn" type="submit">
-							Entrar
+							Recuperar
 						</button>
 					</div>
 
 					<div class="text-center p-t-45 p-b-4">
 						<span class="txt1">
-							Esqueceu a senha?
+							Lembrou a senha?
 						</span>
 
-						<a href="recuperar_senha.php" class="txt2 hov1">
-							Recuperar
+						<a href="index.php" class="txt2 hov1">
+							Voltar
 						</a>
 					</div>
 
 					<div class="text-center">
 						<span class="txt1">
-							Não possue conta?
+							Não possue uma conta?
 						</span>
 
 						<a href="criar_conta.php" class="txt2 hov1">
