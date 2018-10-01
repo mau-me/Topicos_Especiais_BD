@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Criar Conta</title>
+	<title>Submeter Artigo</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -35,85 +35,51 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-				<form class="login100-form validate-form" action="cria_login.php" method="POST">
+				<form class="login100-form validate-form" action="submete_artigo.php" method="POST">
 					<span class="login100-form-title p-b-33">
-						Criar Conta
+						Submeter Artigo
 					</span>
 
 					
-					<div class="wrap-input100 validate-input" data-validate = "Insira seu nome">
-						<input class="input100" type="text" name="nome" placeholder="Nome">
+					<div class="wrap-input100 validate-input" data-validate = "Insira o nome do Artigo">
+						<input class="input100" type="text" name="nome_artigo" placeholder="Nome do Artigo">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 					
-					<div class="wrap-input100 validate-input" data-validate = "Insira seu endereço">
-						<input class="input100" type="text" name="endereço" placeholder="Endereço">
+					<div class="wrap-input100 validate-input" data-validate = "Insira a area do artigo">
+						<input class="input100" type="text" name="area_artigo" placeholder="Area do Artigo">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Insira seu telefone">
-						<input class="input100" type="tel" name="telefone" placeholder="Telefone/Celular">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-
-					
-					<div class="wrap-input100 validate-input" data-validate = "Insira um Local de Trabalho">
-						<input class="input100" type="text" name="local_emprego" placeholder="Local de Emprego">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-
-					
-					<div class="wrap-input100 validate-input" data-validate = "Insira um email válido!">
-						<input class="input100" type="email" name="email" placeholder="Email">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-
-					<div class="wrap-input100 rs1 validate-input" data-validate="Senha é Obrigatória!">
-						<input class="input100" type="password" name="pass" placeholder="Senha">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
+					<div class="wrap-input100 validate-input" data-validate = "Insira o arquivo do artigo">
+						<input class="input100" type="file" name="arquivo" placeholder="Arquivo do Artigo">
 					</div>
 
 					<div class="container-login100-form-btn m-t-20">
 						<button class="login100-form-btn" type="submit">
-							Criar
+							Enviar Artigo
 						</button>
 					</div>
 
 					<div class="text-center p-t-45 p-b-4">
-						<span class="txt1">
-							Possue Conta, mas esqueceu a senha? 
-						</span>
-
-						<a href="recuperar_senha.php" class="txt2 hov1">
-							Recuperar
-						</a>
-					</div>
-
-					<div class="text-center">
-						<span class="txt1">
-							Possuo conta e lembrou a senha?
-						</span>
-
 						<a href="index.php" class="txt2 hov1">
 							Retornar
 						</a>
 					</div>
+					
 				</form>
+				<!-- Deixar aqui mesmo??-->
+				<script>
+					alert("Artigo Enviado!");
+				</script>
 			</div>
 		</div>
 	</div>
 
 	<?php
-            if(isset($_SESSION['loginERRO'])){
-                echo "<p class='text-center text-danger'>" .$_SESSION['loginERRO']. "</p>";
-                unset($_SESSION['loginERRO']);
-            }
+				echo "<p class='text-center'> Arquivo enviado</p>";
     ?>
 
 	
