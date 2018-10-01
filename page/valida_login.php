@@ -17,7 +17,7 @@
     if($rows < 1) {
         $_SESSION['loginERRO'] = "Usuário ou Senha Inválidos!!!";
         echo $_SESSION['loginERRO'];
-        header("Location: principal.html");
+        header("Location: index.html");
     }
     else {
         header("Location: principal.html");
