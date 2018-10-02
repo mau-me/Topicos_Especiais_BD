@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Submeter Artigo</title>
+	<title>Recuperar Senha</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -35,51 +35,52 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-				<form class="login100-form validate-form" action="submete_artigo.php" method="POST">
+				<form class="login100-form validate-form" action="recupera_senha.php" method="POST">
 					<span class="login100-form-title p-b-33">
-						Submeter Artigo
+						Recuperar Senha
 					</span>
 
-					
-					<div class="wrap-input100 validate-input" data-validate = "Insira o nome do Artigo">
-						<input class="input100" type="text" name="nome_artigo" placeholder="Nome do Artigo">
+					<div class="wrap-input100 validate-input" data-validate = "Insira um email válido!">
+						<input class="input100" type="email" name="email" placeholder="Digite o e-mail cadastrado">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
-					</div>
-					
-					<div class="wrap-input100 validate-input" data-validate = "Insira a area do artigo">
-						<input class="input100" type="text" name="area_artigo" placeholder="Area do Artigo">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Insira o arquivo do artigo">
-						<input class="input100" type="file" name="arquivo" placeholder="Arquivo do Artigo">
 					</div>
 
 					<div class="container-login100-form-btn m-t-20">
 						<button class="login100-form-btn" type="submit">
-							Enviar Artigo
+							Recuperar
 						</button>
 					</div>
 
 					<div class="text-center p-t-45 p-b-4">
-						<a href="index.php" class="txt2 hov1">
-							Retornar
+						<span class="txt1">
+							Lembrou a senha?
+						</span>
+
+						<a href="login.html" class="txt2 hov1">
+							Voltar
 						</a>
 					</div>
-					
+
+					<div class="text-center">
+						<span class="txt1">
+							Não possue uma conta?
+						</span>
+
+						<a href="cria_conta.html" class="txt2 hov1">
+							Criar uma
+						</a>
+					</div>
 				</form>
-				<!-- Deixar aqui mesmo??-->
-				<script>
-					alert("Artigo Enviado!");
-				</script>
 			</div>
 		</div>
 	</div>
 
 	<?php
-				echo "<p class='text-center'> Arquivo enviado</p>";
+            if(isset($_SESSION['loginERRO'])){
+                echo "<p class='text-center text-danger'>" .$_SESSION['loginERRO']. "</p>";
+                unset($_SESSION['loginERRO']);
+            }
     ?>
 
 	
