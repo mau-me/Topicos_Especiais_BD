@@ -2,10 +2,14 @@
     include "connect/connection.php";
     session_start();
 
-    $email = $_POST['email'];
+    $nome = $_POST['nome'];
+	$end = $_POST['endereco'];
+	$tel = $_POST['telefone'];
+	$local_e= $_POST['local-emprego'];
+	$email = $_POST['email'];
     $pass = md5($_POST['password']);
-	
-	$stmt = $pdo->query("SELECT * FROM users WHERE email = '$email' AND senha = '$pass' LIMIT 1";);
+
+	$stmt = $pdo->prepare("INSERT INTO Participantes VALUES ('$nome','$end','$tel','$local_e','$email','$pass')");
     $stmt->execute;
    
 	echo $stmt->rowCount(); 
@@ -17,5 +21,4 @@
     else {
         header("Location: principal.html");
     }
-
 ?>
