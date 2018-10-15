@@ -1,0 +1,8 @@
+Cadastrar Usuário --> Create
+Gerar Crachá  (OPCIONAL)
+Gerar e Enviar Certificado(REVER)
+Enviar Artigos 
+Revisar Artigo (FAZER)
+Alertar Revisão (FAZER)
+Gerar Lista Artigo	s
+Enviar Lista Participantes(REVER)
