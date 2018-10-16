@@ -19,4 +19,4 @@
 19. Ao fim do prazo, o sistema deve gerar uma lista com todos os artigos em ordem decrescente das medias obtidas na avaliacao, ate o 20 artigo
 20. Devem ser excluidos todos os artigos com menos de 3 revisoes 
 21. A lista de com artigos aprovados deve ser enviada a todos os participantes por e-mail 
-22. O autor nao pode revisar o proprio artigo.
+22. O autor ou co-autor nao pode revisar o proprio artigo.

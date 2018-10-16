@@ -5,7 +5,7 @@ USE `sistema_artigos`;
 
 DROP TABLE IF EXISTS `Participante`;
 CREATE TABLE `Participante` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` Int(5) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
   `nome` varchar(30),
   `endereco` varchar(30),
   `telefone` varchar(30),
@@ -19,14 +19,14 @@ CREATE TABLE `Participante` (
 
 DROP TABLE IF EXISTS `Artigo`;
 CREATE TABLE `Artigo` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` Int(5) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
   `resumo_artigo` varchar(300),
   PRIMARY KEY (`id`)
 );
 
 DROP TABLE IF EXISTS `Participante_Artigo`;
 CREATE TABLE `Participante_Artigo` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` Int(5) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
   `id_participante` int,
   `id_artigo` int,
   PRIMARY KEY (`id`)
@@ -57,7 +57,16 @@ CREATE TABLE `Acesso` (
   `id` int NOT NULL AUTO_INCREMENT,
   `user` varchar(30),
   `password` varchar(30),
-  `id_participante` int,
+  PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `Info_Congresso`;
+CREATE TABLE `Info_Congresso` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(30),
+  `data_inicio` date,
+  `data_fim` date,
+  `limite_submissao` date,
   PRIMARY KEY (`id`)
 );
 
@@ -75,3 +84,6 @@ ADD FOREIGN KEY (`id_artigo`) REFERENCES `Artigo`(`id`);
 
 ALTER TABLE `Revisor_Artigo`
 ADD FOREIGN KEY (`id_participante`) REFERENCES `Participante`(`id`);
+
+ALTER TABLE `Acesso`
+ADD FOREIGN KEY (`id`) REFERENCES `Participante`(`id`);
