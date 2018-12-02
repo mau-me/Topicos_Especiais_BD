@@ -3,22 +3,26 @@
     session_start();
 
     $nome = $_POST['nome'];
-	$end = $_POST['endereco'];
-	$tel = $_POST['telefone'];
-	$local_e= $_POST['local-emprego'];
+	$endereco = $_POST['endereco'];
+	$telefone = $_POST['telefone'];
 	$email = $_POST['email'];
-    $pass = md5($_POST['password']);
-
-	$stmt = $pdo->prepare("INSERT INTO Participantes VALUES ('$nome','$end','$tel','$local_e','$email','$pass')");
-    $stmt->execute;
+	$local_emprego= $_POST['local_emprego'];
+	//$pass = md5($_POST['password']);
+	
+	$pdo = new PDO('mysql:host=localhost;dbname=SISTEMA_ARTIGOS', "root", "");
+	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+	$stmt = $pdo->prepare("INSERT INTO SISTEMA_ARTIGOS.Participante (nome, endereco, telefone, email, local_emprego, revisor, autor) 
+	VALUES ('$nome','$endereco','$telefone','$email','$local_emprego',0,1)");//,'$pass')";
+    $stmt->execute();
    
 	echo $stmt->rowCount(); 
 	if($rows < 1) {
         $_SESSION['loginERRO'] = "Usuário já cadastrado!!";
         echo $_SESSION['loginERRO'];
-        header("Location: principal.html");
+        header("Location: submeter_artigo.html");
     }
     else {
-        header("Location: principal.html");
+        header("Location: cria_conta.html");
     }
 ?>

@@ -1,16 +1,16 @@
 <?php
     include "connect/connection.php";
     session_start();
-
+	
     $nome = $_POST['nome'];
 	$end = $_POST['endereco'];
 	$tel = $_POST['telefone'];
-	$local_e= $_POST['local-emprego'];
+	$local_emprego= $_POST['local-emprego'];
 	$email = $_POST['email'];
-    $pass = md5($_POST['password']);
+    //$pass = md5($_POST['password']);
 
     // cria a instrução SQL que vai selecionar os dados
-    $query = "INSERT INTO Participantes VALUES ('$nome','$end','$tel','$local_e','$email','$pass')";
+    $query = "INSERT INTO SISTEMA_ARTIGOS.Participante VALUES ('$nome','$end','$tel','$local_emprego','$email'");//,'$pass')";
     // executa a query
 	$dados = mysqli_query($link, $query) or die(mysql_error());
 
