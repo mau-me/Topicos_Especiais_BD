@@ -1,0 +1,20 @@
+TABELAS USADOS OLAP
+1 - PARTICIPANTE
+2 - ARTIGO
+3 - PARTICIPANTES_ARTIGO
+4 - REVISOR_ARTIGO
+5 - CARTÃO
+
+o que fazer(quais campos) no CUBO?
+N° Médio de Revisores e Revisores por Local_Emprego
+N° Médio de Autores e Autores por Local_Emprego
+N° Médio de Artigos Autor e N° Médio de Artigos Autor por Local_Emprego
+N° Médio de Artigos Revisor e N° Médio de Artigos Revisor por Local_Emprego
+
+Nota Média Artigos por Autor
+Nota Média Artigos por Revisor
+
+Marca Cartão por Autor
+Marca Cartão por Revisor
+
+
